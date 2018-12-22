@@ -23,6 +23,10 @@ jobs:
       env:
         - "TEST_TOOL=rubygems YAML=psych"
       script: util/ci rubocop
+    - stage: jruby
+      rvm: jruby
+      env:
+        - "TEST_TOOL=rubygems YAML=psych"
 stages:
   - linting
   - test
